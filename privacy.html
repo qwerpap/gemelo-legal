@@ -1,8 +1,45 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gemelo — Privacy Policy</title><style>body{font-family:-apple-system,Helvetica,Arial,sans-serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.6;color:#26261B;background:#F0EDE1}h1,h2{font-family:'Avenir Next Condensed','Arial Narrow',sans-serif;font-weight:800}h2{margin-top:28px}a{color:#9A5E10}.warn{background:#FBF9F2;border-left:4px solid #B0302A;padding:12px 16px}</style></head><body><h1>Gemelo — Privacy Policy</h1><p><em>Last updated: September 29, 2026</em></p><p class="warn"><strong>Not a safety tool.</strong> Gemelo gives an AI estimate from photos and shows look-alikes. It never says a mushroom can be eaten. Never eat a wild mushroom based on an app — show it to a local expert. If someone may have eaten a wild mushroom, call poison control or emergency services now.</p><p>Gemelo checks a mushroom against its dangerous look-alikes. We built it to keep your data on your iPhone.</p>
-<h2>What stays on your device</h2><p>Your quiz answers, field notes, places, notes and saved photos are stored only on your iPhone. There is no account and no server copy of your notes.</p>
-<h2>Photos you choose to check</h2><p>When you run a check, and only after you agree in the app, the one to four photos you took are sent through our own server to OpenAI's vision service to shortlist species from Gemelo's built-in catalogue. They are used only to answer that request. Our server does not store them. OpenAI processes them under its API data policy (API inputs are not used to train its models). You can turn this off any time in Settings.</p>
-<h2>Purchases and analytics</h2><p>Subscriptions are handled by Apple. We use Adapty to confirm your subscription and to count onboarding steps, paywall views and purchases; it receives an anonymous app profile ID, your quiz answers (where you look, region, reason) and purchase events — not your name, photos or notes. We don't use advertising or third-party analytics SDKs, and we don't collect IDFA.</p>
-<h2>Reports</h2><p>"Report wrong ID" opens your own mail app with the shortlist; nothing is sent unless you send that email.</p>
-<h2>Children</h2><p>Gemelo is not directed at children and collects no personal data from anyone.</p>
-<h2>Deleting data</h2><p>Delete any note in the app, or delete the app to remove everything.</p>
-<h2>Contact</h2><p><a href="mailto:netkaktakto@gmail.com">netkaktakto@gmail.com</a></p><p><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a></p></body></html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark"><title>Privacy policy · Gemelo</title>
+<style>
+:root{--bg:#E9EFE3;--ink:#17231A;--soft:#51614F;--line:#B9C8B0;--acc:#A3461C;--panel:#F6F9F1;--warn:#FFF1D6}
+@media (prefers-color-scheme:dark){:root{--bg:#0E1710;--ink:#E3ECDD;--soft:#97AA94;--line:#2A3B2C;--acc:#F0A06B;--panel:#152019;--warn:#2B2412}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 ui-serif,"Iowan Old Style","Palatino Linotype",Georgia,serif}
+.wrap{max-width:780px;margin:0 auto;padding:28px 18px 60px}
+.top{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--ink);padding-bottom:8px;flex-wrap:wrap;gap:6px}
+.top b{font:700 14px/1 ui-monospace,Menlo,monospace;letter-spacing:.16em;text-transform:uppercase}
+.top span{font:12px ui-monospace,Menlo,monospace;color:var(--soft)}
+h1{font-size:34px;line-height:1.15;margin:.8em 0 .2em;font-weight:700}
+h2{font:700 14px/1.2 ui-monospace,Menlo,monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);margin:2em 0 .5em;border-top:1px solid var(--line);padding-top:14px}
+h2 i{font-style:normal;color:var(--soft);margin-right:8px}
+a{color:var(--acc)}
+.box{background:var(--panel);border:1px solid var(--line);padding:12px 16px;border-radius:2px}
+.warn{background:var(--warn);border-left:5px solid var(--acc);padding:12px 16px;margin:16px 0}
+dl{display:grid;grid-template-columns:minmax(120px,190px) 1fr;gap:6px 18px;margin:0}
+dt{font:600 13px/1.5 ui-monospace,Menlo,monospace;color:var(--soft)}
+dd{margin:0}
+@media(max-width:560px){dl{grid-template-columns:1fr}dt{margin-top:8px}}
+nav{margin-top:40px;font:13px ui-monospace,Menlo,monospace}
+nav a{margin-right:16px}
+</style></head><body>
+<div class="wrap"><div class="top"><b>Gemelo</b><span>Updated 2026-10-06</span></div><h1>Privacy policy</h1>
+<p>Gemelo helps you compare a wild mushroom with its toxic look-alikes. Most of what you do stays on your iPhone. One feature, the photo check, needs a server, and this page says exactly what happens to those photos.</p>
+<h2><i>01</i>Stays on your iPhone</h2>
+<p>Field notes, saved finds with their photos, places, your region, your quiz answers and settings are stored in the app on your phone. There is no account and no copy of your notes on our side. Photos you take for a find are saved as files next to the app's data.</p>
+<h2><i>02</i>The photo check</h2>
+<div class="box"><dl>
+<dt>What is sent</dt><dd>One to four photos you chose for a check, with the angle label of each (cap, underside, base, cut). Nothing else from your library. The app asks before the first check.</dd>
+<dt>Where to</dt><dd>Our own proxy, a Firebase Cloud Function in Google Cloud (us-central1), which forwards the photos to an AI vision model. The model is Google's Gemini, run through Replicate; if it fails, OpenAI's vision model is used as a backup.</dd>
+<dt>Why</dt><dd>To shortlist the species from Gemelo's built-in catalogue that your mushroom could be, with their dangerous look-alikes.</dd>
+<dt>Kept?</dt><dd>Our proxy does not save your photos or the answer. The AI providers process them to return the result and handle them under their own terms.</dd></dl></div>
+<p>If you do not want photos to leave your phone, do not run a check; the look-alike tables and field notes work without it. Choosing a photo from your gallery needs no photo-library permission, and the camera asks for permission only when you take a picture.</p>
+<h2><i>03</i>Camera</h2><p>Gemelo asks for camera access to photograph a mushroom from several angles. Pictures are used only for the check you start and for the find you save.</p>
+<h2><i>04</i>Purchases and measurement</h2>
+<p>Subscriptions are processed by Apple. We use Adapty to confirm that Gemelo Pro is active and to count onboarding steps, paywall views and purchases. Adapty receives a random profile ID, your onboarding answers (where you look, your region, why you forage) and purchase events. It never receives your photos, notes, name or email. There are no ad SDKs and no tracking across other apps or sites.</p>
+<h2><i>05</i>Reports and phone calls</h2>
+<p>"Report wrong ID" opens your mail app with the shortlist filled in; it is sent only if you press Send. The poison-control button hands a phone number to the Phone app; the call is made by you, not by Gemelo.</p>
+<h2><i>06</i>Deleting</h2><p>Delete any find or note inside the app, or delete Gemelo to remove everything stored on the phone. To ask about the anonymous subscription profile, write to the address below.</p>
+<div class="warn"><b>Safety.</b> Gemelo never says a mushroom is safe to eat and is not a substitute for an expert. If someone has eaten a wild mushroom, call poison control or emergency services at once.</div>
+<h2><i>07</i>Children, changes, contact</h2><p>Gemelo is not directed at children. Changes to this policy appear here with a new date. Contact: <a href="mailto:netkaktakto@gmail.com">netkaktakto@gmail.com</a>.</p><nav><a href="index.html">index</a><a href="privacy.html">privacy</a><a href="terms.html">terms</a><a href="support.html">support</a></nav></div>
+</body></html>
